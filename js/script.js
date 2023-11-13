@@ -45,7 +45,8 @@ function () {
   //* calcolo del prezzo in base ai km (0.1976 euro al km)
 
   const calcPriceKm = (kmUser * 0.1976).toFixed(2);
-  console.log(`'calcolo prezzo moltiplicato per 0.1976 euro: ' ${calcPriceKm}`);
+  console.log(`calcolo prezzo moltiplicato per 0.1976 euro:  ${calcPriceKm}`);
+  document.getElementById('priceTot').innerHTML = `${calcPriceKm} Euro`;
 
   //* una volta avuto il prezzo totale possiamo fare le varie operazioni con IF
 
@@ -54,16 +55,19 @@ function () {
   if (ageUser < 18) {
     const discount = (calcPriceKm * 17.65) / 100;
     const priceTotale = (calcPriceKm - discount).toFixed(2);
-    console.log(`'il prezzo con lo sconto del 17.65% è: ' ${priceTotale}`);
+    console.log(`il prezzo con lo sconto del 17.65% è:  ${priceTotale}`);
+    document.getElementById('priceTot').innerHTML = ` Il prezzo totale con lo sconto del 17.65% è: ${priceTotale} Euro`;
 
                                 // ! seconda condizione calcolare lo sconto del 53.27% se hanno superato i 65 anni
   } else if (ageUser >= 65) {
     const discount = (calcPriceKm * 53.27) / 100;
     const priceTotale = (calcPriceKm - discount).toFixed(2);
-    console.log(`'il prezzo con lo sconto del 53.27% è: ' ${priceTotale}`);
+    console.log(`il prezzo con lo sconto del 53.27% è:  ${priceTotale}`);
+    document.getElementById('priceTot').innerHTML = ` Il prezzo totale con lo sconto del 53.27% è: ${priceTotale} Euro`;
 
                                //!terza condizione se l'età non rientra nello sconto
   } else {
-    console.log(`'il prezzo senza sconto è:' ${calcPriceKm}`);
+    console.log(`il prezzo senza sconto è: ${calcPriceKm}`);
+    document.getElementById('priceTot').innerHTML = ` Il prezzo totale senza sconto è: ${calcPriceKm} Euro`;
   }
 });
