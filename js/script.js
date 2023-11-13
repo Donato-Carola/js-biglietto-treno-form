@@ -33,7 +33,7 @@ buttonElement.addEventListener("click",
 function () {
 
   //* valore dei kilometri inseriti nel tag html INPUT con id km(kilomteri)
-  
+
   const kmUser = parseFloat(document.getElementById("km").value);
   console.log(kmUser);
 
@@ -44,7 +44,7 @@ function () {
 
   //* calcolo del prezzo in base ai km (0.1976 euro al km)
 
-  const calcPriceKm = kmUser * 0.1976;
+  const calcPriceKm = (kmUser * 0.1976).toFixed(2);
   console.log(`'calcolo prezzo moltiplicato per 0.1976 euro: ' ${calcPriceKm}`);
 
   //* una volta avuto il prezzo totale possiamo fare le varie operazioni con IF
