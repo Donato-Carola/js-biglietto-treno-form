@@ -56,7 +56,7 @@ function () {
     const priceTotale = (calcPriceKm - discount).toFixed(2);
     console.log(`'il prezzo con lo sconto del 17.65% è: ' ${priceTotale}`);
 
-                                // ! seconda condizione calcolare lo sconto del 53.27% se sono minorenni
+                                // ! seconda condizione calcolare lo sconto del 53.27% se hanno superato i 65 anni
   } else if (ageUser >= 65) {
     const discount = (calcPriceKm * 53.27) / 100;
     const priceTotale = (calcPriceKm - discount).toFixed(2);
